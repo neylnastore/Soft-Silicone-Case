@@ -1,1 +1,614 @@
-sddd
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Silicone Phone Case - IMPORTAN.CO</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.orderonline.id/uploads/images_8057151757173758894.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .product-gallery img {
+            transition: all 0.3s ease;
+        }
+        .product-gallery img:hover {
+            transform: scale(1.03);
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        .modal-overlay {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .countdown-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .new-order-notification {
+            animation: slideIn 0.5s forwards, slideOut 0.5s forwards 5s;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        @keyframes slideOut {
+            from { transform: translateY(0); }
+            to { transform: translateY(100%); }
+        }
+        .price-strike {
+            position: relative;
+        }
+        .price-strike::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #ef4444;
+            transform: rotate(-10deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://cdn.orderonline.id/uploads/images_8057151757173758894.jpg" alt="IMPORTAN.CO Logo" class="h-10 w-10 rounded-full object-cover">
+                <span class="font-bold text-xl text-gray-800">IMPORTAN.CO</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex items-center space-x-1 text-sm">
+                    <i data-feather="shield" class="text-blue-500"></i>
+                    <span>Garansi 1 Tahun</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-1 text-sm">
+                    <i data-feather="truck" class="text-green-500"></i>
+                    <span>Gratis Ongkir</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-1 text-sm">
+                    <i data-feather="clock" class="text-yellow-500"></i>
+                    <span>24 Jam Support</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12 md:py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Soft Silicone Phone Case Premium</h1>
+                <p class="text-lg text-gray-600 mb-6">Lindungi smartphone Anda dengan case premium yang stylish dan fungsional. Desain breathable dan bingkai kamera yang bisa dijadikan bracket!</p>
+                
+                <div class="flex items-center mb-6">
+                    <div class="flex items-center mr-4">
+                        <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                        <span class="font-bold">4.9</span>
+                        <span class="text-gray-500 ml-1">(1.248 reviews)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-feather="eye" class="text-blue-500 mr-1"></i>
+                        <span class="font-bold"><span id="view-counter">1,248</span>+ dilihat</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-sm text-gray-500">Harga Normal</p>
+                            <p class="price-strike text-lg text-gray-500">Rp 243.750</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm text-gray-500">Harga Promo</p>
+                            <p class="text-2xl font-bold text-red-600">Rp 162.500</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 bg-yellow-100 text-yellow-800 text-xs p-2 rounded">
+                        <i data-feather="alert-triangle" class="inline mr-1"></i> Promo berakhir dalam: 
+                        <span id="countdown" class="font-bold">00:15:24</span>
+                    </div>
+                </div>
+                
+                <a href="#order-form" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 inline-flex items-center">
+                    <i data-feather="shopping-cart" class="mr-2"></i> BELI SEKARANG
+                </a>
+                <p class="text-sm text-gray-500 mt-2 flex items-center">
+                    <i data-feather="info" class="mr-1"></i> KHUSUS PEMBAYARAN TF HARI INI DAPAT GRATIS ONGKIR
+                </p>
+            </div>
+            
+            <div class="md:w-1/2" data-aos="fade-left">
+                <div class="relative">
+                    <img src="https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01gZz0NF1ZDn0x4eMQq__2218463003161-0-cib.jpg?v=1748419854" 
+                         alt="Soft Silicone Phone Case" 
+                         class="rounded-lg shadow-xl w-full max-w-md mx-auto">
+                    <div class="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md badge">
+                        BEST SELLER
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8" data-aos="fade-up">Galeri Produk</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 product-gallery">
+                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="100" onclick="openModal('https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01gZz0NF1ZDn0x4eMQq__2218463003161-0-cib.jpg?v=1748419854')">
+                    <img src="https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01gZz0NF1ZDn0x4eMQq__2218463003161-0-cib.jpg?v=1748419854" 
+                         alt="Soft Silicone Phone Case" 
+                         class="rounded-lg w-full h-40 object-cover">
+                </div>
+                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="openModal('https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01JyV8c11ZDn0zDB6XE__2218463003161-0-cib.jpg?v=1748419852')">
+                    <img src="https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01JyV8c11ZDn0zDB6XE__2218463003161-0-cib.jpg?v=1748419852" 
+                         alt="Soft Silicone Phone Case" 
+                         class="rounded-lg w-full h-40 object-cover">
+                </div>
+                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openModal('https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01v7vOj51ZDn0xBHZ6K__2218463003161-0-cib.jpg?v=1748419852')">
+                    <img src="https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01v7vOj51ZDn0xBHZ6K__2218463003161-0-cib.jpg?v=1748419852" 
+                         alt="Soft Silicone Phone Case" 
+                         class="rounded-lg w-full h-40 object-cover">
+                </div>
+                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="400" onclick="openModal('https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01weJWpM1ZDn0yEhRMk__2218463003161-0-cib.jpg?v=1748419852')">
+                    <img src="https://cdn.shopify.com/s/files/1/0722/3489/3590/files/O1CN01weJWpM1ZDn0yEhRMk__2218463003161-0-cib.jpg?v=1748419852" 
+                         alt="Soft Silicone Phone Case" 
+                         class="rounded-lg w-full h-40 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8" data-aos="fade-up">Kenapa Memilih Soft Silicone Phone Case?</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="shield" class="text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Perlindungan Maksimal</h3>
+                            <p class="text-gray-600">Material silikon premium yang lembut namun kuat, memberikan perlindungan optimal terhadap benturan dan goresan.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i data-feather="cpu" class="text-green-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Bingkai Kamera Fleksibel</h3>
+                            <p class="text-gray-600">Bingkai area kamera bisa dikeluarkan dan dijadikan bracket untuk pengalaman fotografi yang lebih stabil.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i data-feather="wind" class="text-purple-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Desain Breathable</h3>
+                            <p class="text-gray-600">Material yang memungkinkan sirkulasi udara, mencegah panas berlebih pada smartphone Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <i data-feather="smartphone" class="text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Kompatibel dengan Semua iPhone</h3>
+                            <p class="text-gray-600">Tersedia untuk semua varian iPhone dari seri 11 hingga 16 Pro Max. Pilih warna favorit Anda: Black, Navy, Army, atau Grey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8" data-aos="fade-up">Apa Kata Pelanggan Kami?</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-500 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold mr-3">AS</div>
+                        <div>
+                            <h4 class="font-bold">Andi Susanto</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Case-nya sangat nyaman dipegang dan tidak licin. Fitur bracket untuk kamera sangat membantu saat selfie!"</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-500 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold mr-3">RD</div>
+                        <div>
+                            <h4 class="font-bold">Rina Dewi</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Warnanya tidak mudah pudar meski sudah dipakai berbulan-bulan. Desainnya juga tipis tapi protektif banget."</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-500 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold mr-3">BS</div>
+                        <div>
+                            <h4 class="font-bold">Budi Santoso</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Pengiriman cepat dan packing rapi. Case-nya pas banget di iPhone 14 Pro Max saya, tidak menambah berat."</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold mr-3">DW</div>
+                        <div>
+                            <h4 class="font-bold">Dewi Wulandari</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Saya beli 3 warna sekaligus karena harganya terjangkau tapi kualitas premium. Recomended banget!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="py-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4" data-aos="fade-up">Jangan Sampai Kehabisan!</h2>
+            <p class="mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Stok terbatas! Hanya tersisa <span class="font-bold" id="stock-counter">37</span> pcs untuk promo hari ini. 
+                Manfaatkan diskon spesial dan gratis ongkir sebelum promo berakhir.
+            </p>
+            
+            <div class="max-w-md mx-auto bg-white bg-opacity-20 rounded-lg p-4 mb-6 countdown-box" data-aos="fade-up" data-aos-delay="200">
+                <p class="mb-2">PROMO BERAKHIR DALAM:</p>
+                <div class="text-2xl font-bold" id="urgent-countdown">00:15:24</div>
+            </div>
+            
+            <a href="#order-form" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 inline-flex items-center" data-aos="fade-up" data-aos-delay="300">
+                <i data-feather="shopping-cart" class="mr-2"></i> BELI SEKARANG - Rp 162.500
+            </a>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order-form" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-600 text-white p-8 flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-4">Soft Silicone Phone Case</h2>
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4">
+                                <p class="text-sm">Harga Normal</p>
+                                <p class="price-strike">Rp 243.750</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Harga Promo</p>
+                                <p class="text-2xl font-bold">Rp 162.500</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="mr-2"></i> Material Silikon Premium
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="mr-2"></i> Bingkai Kamera Fleksibel
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="mr-2"></i> Desain Breathable
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="mr-2"></i> Garansi 1 Tahun
+                            </li>
+                        </ul>
+                        <div class="bg-white bg-opacity-20 rounded p-3">
+                            <p class="font-bold flex items-center">
+                                <i data-feather="gift" class="mr-2"></i> BONUS GRATIS ONGKIR
+                            </p>
+                            <p class="text-sm">Khusus pembayaran transfer hari ini</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Form Pemesanan</h3>
+                        <!-- OrderOnline Embed Code -->
+                        <div class="ooef">
+                            <form class="orderonline-embed-form" data-username="vera" data-product-slug="soft-silicone-phone-case" data-product-id="68bc5a2042f9644fb50fceed" id="oo-embed-form-soft-silicone-phone-case-4202" data-origin="orderonline">
+                                <div class="ooef-loader">
+                                    <style>
+                                        .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                                        @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                        @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                        .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                                        .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                                        .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                                        @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                        @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                    </style>
+                                    <div aria-live="polite" role="status">
+                                        <div>Loading...</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <script>
+                            if (typeof xLogError != 'function') {
+                                var xLogError = function (error) {
+                                    var req = new XMLHttpRequest();
+                                    var payload = JSON.stringify({
+                                        url: document.location.href,
+                                        line: error.line,
+                                        stack: error.stack
+                                    });
+                                    var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                                    req.open('POST', 'https://api.orderonline.id/log', true);
+                                    req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                    req.send(params);
+                                };
+                            }
+                            try {
+                                if (typeof xEmbedScript != 'function') {
+                                    var xEmbedScript = function () {
+                                        !function(w, d, e, v, id, t, s) {
+                                            if (d.getElementById(id)) return;
+                                            t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                            s = d.getElementsByTagName(e)[0];
+                                            s.parentNode.insertBefore(t, s);
+                                        }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                                    };
+                                }
+                                if (typeof xEmbedInit != 'function') {
+                                    var xEmbedInit = function (w, n) {
+                                        if (w.ooe) return;
+                                        n = w.ooe = function() {
+                                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                        };
+                                        if (!w._ooe) w._ooe = n;
+                                        n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                                    };
+                                }
+                                xEmbedInit(window);
+                                ooe('setup', 'redirect', 'https://vera.orderonline.id');
+                                ooe('init', '5f1a7807a9bf807d6c63d963', '68bc5a2042f9644fb50fceed', '68bc5a2042f9644fb50fceee', 'oo-embed-form-soft-silicone-phone-case-4202', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false});
+                                if (!window.jQuery) {
+                                    !function(w, d, e, v, id, t, s) {
+                                        if (d.getElementById(id)) return;
+                                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                        t.addEventListener('load', xEmbedScript);
+                                        s = d.getElementsByTagName(e)[0];
+                                        s.parentNode.insertBefore(t, s);
+                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                                } else {
+                                    xEmbedScript();
+                                }
+                            } catch (e) {
+                                xLogError(e);
+                                throw e;
+                            }
+                        </script>
+                        <!-- End OrderOnline Embed Code -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="https://cdn.orderonline.id/uploads/images_8057151757173758894.jpg" alt="IMPORTAN.CO Logo" class="h-10 w-10 rounded-full object-cover mr-3">
+                    <span class="font-bold text-xl">IMPORTAN.CO</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-blue-300 transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-300 transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-300 transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-300 transition">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-sm text-gray-400">
+                <p>&copy; 2023 IMPORTAN.CO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center modal opacity-0 pointer-events-none">
+        <div class="modal-overlay absolute inset-0"></div>
+        <div class="relative z-10 max-w-4xl w-full p-4">
+            <button onclick="closeModal()" class="absolute -top-10 right-0 text-white hover:text-gray-300">
+                <i data-feather="x" class="w-8 h-8"></i>
+            </button>
+            <img id="modal-image" src="" alt="" class="w-full max-h-screen object-contain">
+        </div>
+    </div>
+
+    <!-- New Order Notification -->
+    <div id="new-order-notification" class="new-order-notification fixed bottom-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-xs z-50 hidden">
+        <div class="flex items-start">
+            <div class="bg-green-100 p-2 rounded-full mr-3">
+                <i data-feather="shopping-bag" class="text-green-600"></i>
+            </div>
+            <div class="flex-1">
+                <div class="flex justify-between items-start">
+                    <h4 class="font-bold text-sm">Pesanan Baru!</h4>
+                    <button onclick="closeNotification()" class="text-gray-400 hover:text-gray-600 ml-2">
+                        <i data-feather="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+                <p class="text-xs text-gray-600 mt-1"><span id="customer-name">Rudi</span> dari <span id="customer-location">Bandung</span> baru saja memesan Soft Silicone Phone Case</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize feather icons
+        feather.replace();
+
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const endTime = new Date();
+            endTime.setHours(23, 59, 59); // Set to end of day
+            
+            const diff = endTime - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            document.getElementById('urgent-countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // View counter
+        function updateViewCounter() {
+            const views = Math.floor(Math.random() * 50) + 1248;
+            document.getElementById('view-counter').textContent = views.toLocaleString();
+        }
+        
+        updateViewCounter();
+        setInterval(updateViewCounter, 30000); // Update every 30 seconds
+
+        // Stock counter
+        function updateStockCounter() {
+            const stock = Math.floor(Math.random() * 10) + 30;
+            document.getElementById('stock-counter').textContent = stock;
+        }
+        
+        updateStockCounter();
+        setInterval(updateStockCounter, 45000); // Update every 45 seconds
+
+        // Image modal
+        function openModal(imageSrc) {
+            const modal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            
+            modalImage.src = imageSrc;
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.classList.remove('opacity-100', 'pointer-events-auto');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'auto';
+        }
+
+        // New order notification
+        const names = ['Andi', 'Budi', 'Citra', 'Dewi', 'Eka', 'Fajar', 'Gita', 'Hadi', 'Indra', 'Joko'];
+        const locations = ['Jakarta', 'Bandung', 'Surabaya', 'Medan', 'Semarang', 'Yogyakarta', 'Bali', 'Makassar', 'Palembang', 'Balikpapan'];
+        
+        function showNewOrderNotification() {
+            const notification = document.getElementById('new-order-notification');
+            const customerName = document.getElementById('customer-name');
+            const customerLocation = document.getElementById('customer-location');
+            
+            customerName.textContent = names[Math.floor(Math.random() * names.length)];
+            customerLocation.textContent = locations[Math.floor(Math.random() * locations.length)];
+            
+            notification.classList.remove('hidden');
+            
+            setTimeout(() => {
+                notification.classList.add('hidden');
+            }, 5000);
+        }
+        
+        function closeNotification() {
+            document.getElementById('new-order-notification').classList.add('hidden');
+        }
+        
+        // Show first notification after 3 seconds
+        setTimeout(showNewOrderNotification, 3000);
+        
+        // Show subsequent notifications every 30-60 seconds
+        setInterval(() => {
+            showNewOrderNotification();
+        }, Math.floor(Math.random() * 30000) + 30000);
+    </script>
+</body>
+</html>
